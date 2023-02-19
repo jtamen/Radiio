@@ -41,7 +41,7 @@ On crée 1 variable :
 let Joueur1 = 1
  ```
  
- ## Etape 3
+## Etape 3
 Nous allons créer une ``||Functions : fonction||`` (sous-programme) qui permettra d'indiquer si c'est au joueur 1 de jouer ou au joueur 2.
 Cette commande étant répétée à plusieurs reprise, il est conseillé d'en faire une ``||Functions : fonction||`` que nous appelerons chaque 
 fois que nous en auront besoin. Nous créerons d'autres ``||Functions : fonctions||`` par la suite.
@@ -111,15 +111,16 @@ Nous pouvons même le ralentir en cliquant sur le mode "escargot" ![Afficher esc
 En cliquant à plusieurs reprises sur le bouton A de la simulation, on voit dans ce mode "débogueur"
 le changement d'état de la variable ``||Variables: joueur1||``.
 ![Afficher debogueur](https://github.com/jtamen/tuto1/blob/master/Images/debogueur.gif?raw=true)
+Il est vivement recommandé d'utiliser ce mode de débogage, lorsqu'une nouvelle étape importante
+du programme est créée. Cela permet de comparer le résultat par rapport à nos attentes.
 
-
- ## Etape 2bis
-On crée 3 variables :
-* ``||Variables: Joueur1||``, qui suivant qu'elle sera à 1 ou à 0 indiquera si c'est au joueur 1 de jouer ou pas.
-* ``||Variables: x||``, qui indique la position de la led sur la ligne
+ ## Etape 8
+On crée 2 nouvelles variables :
+* ``||Variables: x||``, qui indiquera la position de la led sur la ligne
 (0 : position la plus à gauche de la matrice 5x4, 4: position la plus à droite de la matrice 5x4)
-* ``||Variables: y||``, qui indique la position de la led sur la colonne
+* ``||Variables: y||``, qui indiquera la position de la led sur la colonne
 (0 : position la plus en haut de la matrice 5x4, 3: position la plus en bas de la matrice 5x4)
+On défini ces 2 variables à 0 que l'on glisse dans le bloc ``||Basic: au démarrage||``.
 ```blocks
  basic.showLeds(`
     # # # # #
@@ -129,6 +130,63 @@ On crée 3 variables :
     . . . . .
     `)
 let Joueur1 = 1
-let X = 0
 let Y = 0
+let x = 0
+ ```
+## Etape 9
+Nous allons créer une nouvelle ``||Functions : fonction||``  qui permettra d'allumer la Del en bas à gauche (x:0 et y:4)
+si c'est au joueur 1 de jouer et la Del en bas à droite (x:4 et y:4) si c'est au joueur 2.
+
+Dans la catégorie "Avancé", choisir ``||Functions : Fonction||``, puis "Créer une fonction".
+Nommons la ``||Functions : Del J1 ou J2||``.
+- Plaçons-y un bloc ``||Logic: si Vrai...alors...sinon||``.
+- Remplaçons ``||Logic: Vrai||`` par la variable ``||Variables: Joueur1||``.
+- Déposons les blocs ``||Led: allumer x 0  y 4||`` et ``||Led: éteindre x 4  y 4||`` dans la condition ``||Logic: Si ...alors||``.
+- Déposons les blocs ``||Led: allumer x 4  y 4||`` et ``||Led: éteindre x 0  y 4||`` dans la condition ``||Logic: sinon||``.
+```blocks
+function Del_J1_ou_J2 () {
+    if (Joueur1) {
+        led.plot(0, 4)
+        led.unplot(4, 4)
+    } else {
+        led.plot(4, 4)
+        led.unplot(0, 4)
+    }
+}
+ ```
+## Etape 10
+Dans le bloc ``||basic: toujours||``, on glisse la fonction nouvellement créée.
+```blocks
+function Del_J1_ou_J2 () {
+    let Joueur1 = 0
+    if (Joueur1) {
+        led.plot(0, 4)
+        led.unplot(4, 4)
+    } else {
+        led.plot(4, 4)
+        led.unplot(0, 4)
+    }
+}
+basic.forever(function () {
+    Del_J1_ou_J2()
+})
+```
+ ## Etape 
+On crée 2 nouvelles variables :
+* ``||Variables: x||``, qui indiquera la position de la led sur la ligne
+(0 : position la plus à gauche de la matrice 5x4, 4: position la plus à droite de la matrice 5x4)
+* ``||Variables: y||``, qui indiquera la position de la led sur la colonne
+(0 : position la plus en haut de la matrice 5x4, 3: position la plus en bas de la matrice 5x4)
+On défini ces 2 variables à 0 que l'on glisse dans le bloc ``||Basic: au démarrage||``.
+```blocks
+ basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    . . . . .
+    `)
+let Joueur1 = 1
+let Y = 0
+let x = 0
  ```

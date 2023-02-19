@@ -1,20 +1,13 @@
-input.onButtonPressed(Button.A, function () {
-    led.unplot(0, 0)
-    Modifier_le_joueur()
-})
-function Modifier_le_joueur () {
+function Del_J1_ou_J2 () {
+    let Joueur1 = 0
     if (Joueur1) {
-        Joueur1 = 0
+        led.plot(0, 4)
+        led.unplot(4, 4)
     } else {
-        Joueur1 = 1
+        led.plot(4, 4)
+        led.unplot(0, 4)
     }
 }
-let Joueur1 = 0
-basic.showLeds(`
-    # # # # #
-    # # # # #
-    # # # # #
-    # # # # #
-    . . . . .
-    `)
-Joueur1 = 1
+basic.forever(function () {
+    Del_J1_ou_J2()
+})
