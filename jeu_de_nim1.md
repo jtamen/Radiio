@@ -83,6 +83,27 @@ function Modifier_le_joueur () {
     }
 }
  ```
+## Etape 7
+Déposons le bloc ``||Input: lorsque le bouton A est pressé||`` dans l'espace de travail. 
+Glissons à l'intérieur le bloc "LED" ``||Led: allumer x 0 y 0||`` ainsi que le bloc "Fonction" ``||Functions : appel Modifier le joueur||``
+```blocks
+let Joueur1 = 0
+input.onButtonPressed(Button.A, function () {
+    led.unplot(0, 0)
+    Modifier_le_joueur()
+})
+function Modifier_le_joueur () {
+    if (Joueur1) {
+        Joueur1 = 0
+    } else {
+        Joueur1 = 1
+    }
+}
+ ```
+## @showdialog
+A ce stade nous voulons savoir si chaque fois que l'on appuie sur le bouton A, la variable
+``||Variables: joueur1||`` change d'état.
+Pour cela nous allons utiliser le mode débogueur ![Afficher debogueur](https://github.com/jtamen/tuto1/blob/master/Images/Capture%20d%E2%80%99%C3%A9cran%20nim1.jpg?raw=true)
 
  ## Etape 2bis
 On crée 3 variables :
