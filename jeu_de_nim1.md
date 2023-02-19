@@ -54,15 +54,33 @@ function Modifier_le_joueur () {
 }
  ```
 ## Etape 4
-Nous allons créer une ``||Functions : fonction||`` (sous-programme) qui permettra d'indiquer si c'est au joueur 1 de jouer ou au joueur 2.
-Cette commande étant répétée à plusieurs reprise, il est conseillé d'en faire une ``||Functions : fonction||`` que nous appelerons chaque 
-fois que nous en auront besoin. Nous créerons d'autres ``||Functions : fonctions||`` par la suite.
-Nous nommerons cette 1ère fonction : ``||Functions : Modifier le joueur||``.
-
-Dans la catégorie "Avancé", choisir ``||Functions : Fonction||``, puis "Créer une fonction".
-Nommons la ``||Functions : Modifier le joueur||``.
+Plaçons-y un bloc ``||Logic: si Vrai...alors...sinon||``
 ```blocks
 function Modifier_le_joueur () {
+    if (true) {
+        } else {
+        }
+}
+ ```
+## Etape 5
+Remplaçons ``||Logic: Vrai||`` par la variable ``||Variables: Joueur1||``
+```blocks
+function Modifier_le_joueur () {
+    if (Joueur1) {
+        } else {
+        }
+}
+ ```
+## Etape 6
+Déposons le bloc ``||Variables: définir Joueur1 à 0||`` dans la condition ``||Logic: Si ...alors||`` 
+et le bloc ``||Variables: définir Joueur1 à 1||`` dans la condition ``||Logic: sinon||``
+```blocks
+function Modifier_le_joueur () {
+    if (Joueur1) {
+        Joueur1 = 0
+    } else {
+        Joueur1 = 1
+    }
 }
  ```
 
