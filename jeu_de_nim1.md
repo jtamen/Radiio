@@ -40,6 +40,31 @@ On crée 1 variable :
     `)
 let Joueur1 = 1
  ```
+ 
+ ## Etape 3
+Nous allons créer une ``||Functions : fonction||`` (sous-programme) qui permettra d'indiquer si c'est au joueur 1 de jouer ou au joueur 2.
+Cette commande étant répétée à plusieurs reprise, il est conseillé d'en faire une ``||Functions : fonction||`` que nous appelerons chaque 
+fois que nous en auront besoin. Nous créerons d'autres ``||Functions : fonctions||`` par la suite.
+Nous nommerons cette 1ère fonction : ``||Functions : Modifier le joueur||``.
+
+Dans la catégorie "Avancé", choisir ``||Functions : Fonction||``, puis "Créer une fonction".
+Nommons la ``||Functions : Modifier le joueur||``.
+```blocks
+function Modifier_le_joueur () {
+}
+ ```
+## Etape 4
+Nous allons créer une ``||Functions : fonction||`` (sous-programme) qui permettra d'indiquer si c'est au joueur 1 de jouer ou au joueur 2.
+Cette commande étant répétée à plusieurs reprise, il est conseillé d'en faire une ``||Functions : fonction||`` que nous appelerons chaque 
+fois que nous en auront besoin. Nous créerons d'autres ``||Functions : fonctions||`` par la suite.
+Nous nommerons cette 1ère fonction : ``||Functions : Modifier le joueur||``.
+
+Dans la catégorie "Avancé", choisir ``||Functions : Fonction||``, puis "Créer une fonction".
+Nommons la ``||Functions : Modifier le joueur||``.
+```blocks
+function Modifier_le_joueur () {
+}
+ ```
 
  ## Etape 2bis
 On crée 3 variables :
@@ -60,18 +85,3 @@ let Joueur1 = 1
 let X = 0
 let Y = 0
  ```
- 
- ## Etape 3
-Nous allons créer une ``||Functions : fonction||`` (sous-programme) qui permettra d'indiquer si c'est au joueur 1 de jouer ou au joueur 2.
-Cette commande étant répétée à plusieurs reprise, il est conseillé d'en faire une ``||Functions : fonction||`` que nous appelerons chaque 
-fois que nous en auront besoin. Nous créerons d'autres ``||Functions : fonctions||`` par la suite.
-Nous nommerons cette 1ère fonction : ``||Functions : Modifier le joueur||``.
-
-Dans la catégorie "Avancé", choisir ``||Functions : Fonction||``, puis "Créer une fonction".
-Nommons la ``||Functions : Modifier le joueur||``.
-```blocks
-function Modifier_le_joueur () {
-}
- ```
-
- 
