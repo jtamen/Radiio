@@ -14,7 +14,7 @@ joueur 1. Deux personnes jouent à tour de rôle, et choisissent 1, 2 ou 3 allum
 de la microbit). Lorsque le joueur 1 à pris un certain nombre d'alumettes c'est au joueur 2 de jouer, 
 il est représenté par la led en bas à droite. Le joueur qui fini en enlevant la ou les dernières alumettes
 a gagné la partie.
-![Afficher image1](https://github.com/jtamen/boule-magique/blob/master/Images/Capture%20d%E2%80%99%C3%A9cran%20nim1.jpg?raw=true)
+![Afficher image1](https://github.com/jtamen/tuto1/blob/master/Images/Capture%20d%E2%80%99%C3%A9cran%20nim1.jpg?raw=true)
 
 ## Etape 1
 Dans le bloc ``||basic: Au démarrage||``, on allume 20 leds :
@@ -27,7 +27,21 @@ Dans le bloc ``||basic: Au démarrage||``, on allume 20 leds :
     . . . . .
     `)
  ```
- ## Etape 2
+## Etape 2
+On crée 1 variable :
+* ``||Variables: Joueur1||``, qui suivant qu'elle sera à 1 ou à 0 indiquera si c'est au joueur 1 de jouer ou pas.
+```blocks
+ basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    . . . . .
+    `)
+let Joueur1 = 1
+ ```
+
+ ## Etape 2bis
 On crée 3 variables :
 * ``||Variables: Joueur1||``, qui suivant qu'elle sera à 1 ou à 0 indiquera si c'est au joueur 1 de jouer ou pas.
 * ``||Variables: x||``, qui indique la position de la led sur la ligne
