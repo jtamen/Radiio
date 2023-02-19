@@ -103,7 +103,15 @@ function Modifier_le_joueur () {
 ## @showdialog
 A ce stade nous voulons savoir si chaque fois que l'on appuie sur le bouton A, la variable
 ``||Variables: joueur1||`` change d'état.
-Pour cela nous allons utiliser le mode débogueur ![Afficher debogueur](https://github.com/jtamen/tuto1/blob/master/Images/Capture%20d%E2%80%99%C3%A9cran%20nim1.jpg?raw=true)
+Pour cela nous allons utiliser le mode débogueur ![Afficher debogueur](https://github.com/jtamen/tuto1/blob/master/Images/Capture%20d%E2%80%99%C3%A9cran%20debogueur.jpg?raw=true)
+Ce mode permet permet de voir l'état des variables ainsi que l'avancée dans le programme.
+Nous pouvons même le ralentir en cliquant sur le mode "escargot" ![Afficher escargot](https://github.com/jtamen/tuto1/blob/master/Images/Capture%20d%E2%80%99%C3%A9cran%20ralentir.jpg?raw=true)
+
+## @showdialog
+En cliquant à plusieurs reprises sur le bouton A de la simulation, on voit dans ce mode "débogueur"
+le changement d'état de la variable ``||Variables: joueur1||``.
+![Afficher debogueur](https://github.com/jtamen/tuto1/blob/master/Images/debogueur.gif?raw=true)
+
 
  ## Etape 2bis
 On crée 3 variables :
