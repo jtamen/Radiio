@@ -5,7 +5,7 @@ Tutoriel créé par :
 
 ## @showdialog
 Académie :
-![Afficher logo-académie](https://github.com/jtamen/boule-magique/blob/master/Images/logo-IAN.png?raw=true)
+![Afficher logo-académie](https://github.com/jtamen/tuto1/blob/master/Images/logo-IAN.png?raw=true)
 
 ## @showdialog
 Nous allons réaliser un programme permettant de jouer au jeu de nim sur une carte micro:bit.
