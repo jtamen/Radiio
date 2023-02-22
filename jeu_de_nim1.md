@@ -187,4 +187,15 @@ input.onButtonPressed(Button.A, function () {
     Modifier_le_joueur()
 })
  ```
+## Etape 12
+Dans ce même bloc ``||Input: lorsque le bouton A est pressé||``, ajoutons un bloc
+``||Variables: modifier X de 1||``. Chaque fois que l'on cliquera sur A, la Del suivante
+s'éteindra.
+
+## @showdialog
+A ce stade, en mode débogueur nous constatons que chaque fois que nous cliquons sur A,
+ la Del suivante s'éteint et c'est à l'autre joueur de jouer, mais lorsque la variable x
+ atteint la valeur de 5, plus rien ne se passe. Ceci est normal car nous avons atteint la fin de la ligne.
+ Dans la prochaine étape nous devrons faire varier Y.
+![Afficher nim2](https://github.com/jtamen/tuto1/blob/master/Images/nim2.gif?raw=true)
 

@@ -1,5 +1,6 @@
 input.onButtonPressed(Button.A, function () {
     led.unplot(X, Y)
+    X += 1
     Modifier_le_joueur()
 })
 function Del_J1_ou_J2 () {
