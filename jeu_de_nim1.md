@@ -1,6 +1,5 @@
 # Jeu de Nim
 
-
 ## @showdialog
 Tutoriel créé par :
 ![Afficher logo](https://github.com/jtamen/tuto1/blob/master/Images/logo-technotam-chappe1.jpg?raw=true)
