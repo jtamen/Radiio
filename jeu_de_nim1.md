@@ -356,4 +356,11 @@ basic.forever(function () {
     }
 })
  ```
- 
+## @showdialog
+Et voici ce que l'on doit obtenir:
+![Afficher nim3](https://github.com/jtamen/tuto1/blob/master/Images/nim3.gif?raw=true)
+## @showdialog
+ Tu peux le transférer ton programme dans la carte micro:bit 
+ à l'aide de la commande "Télécharger".
+![Afficher bouton](https://github.com/jtamen/tuto1/blob/master/Images/Capture%20d%E2%80%99%C3%A9cran%202023-02-08%20145524.jpg?raw=true)
+afin de le tester directement !
