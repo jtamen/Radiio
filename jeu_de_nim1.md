@@ -1,4 +1,6 @@
 # Jeu de Nim
+
+
 ## @showdialog
 Tutoriel créé par :
 ![Afficher logo](https://github.com/jtamen/tuto1/blob/master/Images/logo-technotam-chappe1.jpg?raw=true)
@@ -17,6 +19,15 @@ a gagné la partie.
 ![Afficher image1](https://github.com/jtamen/tuto1/blob/master/Images/Capture%20d%E2%80%99%C3%A9cran%20nim1.jpg?raw=true)
 
 ## Etape 1
+```ghost
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    . . . . .
+    `)
+    ```
 Dans le bloc ``||basic: Au démarrage||``, on allume 20 leds :
 ```blocks
  basic.showLeds(`
@@ -26,7 +37,7 @@ Dans le bloc ``||basic: Au démarrage||``, on allume 20 leds :
     # # # # #
     . . . . .
     `)
- ```
+    ```
 ## Etape 2
 On crée 1 variable :
 * ``||Variables: Joueur1||``, qui suivant qu'elle sera à 1 ou à 0 indiquera si c'est au joueur 1 de jouer ou pas.
