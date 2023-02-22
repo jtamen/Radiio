@@ -10,6 +10,9 @@ Ce dépôt peut être ajouté en tant qu'**extension** dans MakeCode.
 * cliquez sur **Extensions** dans le menu engrenage
 * recherchez **https://github.com/jtamen/tuto1** et importez
 
+## Tutoriels
+* [Visualiser le tutoriel du jeu de nim1 ***** ](/tuto1/jeu_de_nim1) [Accéder au tutoriel du jeu de nim1](https://makecode.microbit.org/#tutorial:github:jtamen/tuto1/jeu_de_nim1)
+
 ## Éditer ce projet ![Badge du statut de la compilation](https://github.com/jtamen/tuto1/workflows/MakeCode/badge.svg)
 
 Éditer ce dépôt dans MakeCode.
