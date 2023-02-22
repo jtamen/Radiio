@@ -23,7 +23,7 @@ Tu dois réaliser un programme pour faire communiquer par radio deux cartes micr
 Le protocole de communication permet de transmettre des données entre une carte « émettrice » 
 et une carte « réceptrice » 
 
-## Etape 1 @showhint
+## Etape 1
  Sur la carte émetrice :
  ``||basic: Au démarrage||``, il faut régler « radio définir groupe » dans la même plage pour les deux cartes
 (groupe 1 dans notre exemple) Ces plages (groupes) peuvent aller de 1 à 256…
