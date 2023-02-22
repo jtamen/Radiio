@@ -191,7 +191,14 @@ input.onButtonPressed(Button.A, function () {
 Dans ce même bloc ``||Input: lorsque le bouton A est pressé||``, ajoutons un bloc
 ``||Variables: modifier X de 1||``. Chaque fois que l'on cliquera sur A, la Del suivante
 s'éteindra.
-
+```blocks
+input.onButtonPressed(Button.A, function () {
+    led.unplot(X, Y)
+    X += 1
+    Modifier_le_joueur()
+})
+ ```
+ 
 ## @showdialog
 A ce stade, en mode débogueur nous constatons que chaque fois que nous cliquons sur A,
  la Del suivante s'éteint et c'est à l'autre joueur de jouer, mais lorsque la variable x
@@ -199,3 +206,26 @@ A ce stade, en mode débogueur nous constatons que chaque fois que nous cliquons
  Dans la prochaine étape nous devrons faire varier Y.
 ![Afficher nim2](https://github.com/jtamen/tuto1/blob/master/Images/nim2.gif?raw=true)
 
+## Etape 13
+Toujours dans le bloc ``||Input: lorsque le bouton A est pressé||``, ajoutons un bloc
+``||Logic: si ... alors||``. Mettons-y la condition "Si X supérieur ou égal à 5", et à l'intérieur
+de cette boucle, glissons ``||Variables: définir X à 0||`` ainsi que ``||Variables: modifier Y de 1||``.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    led.unplot(X, Y)
+    X += 1
+    if (X >= 5) {
+        X = 0
+        Y += 1
+    }
+    Modifier_le_joueur()
+})
+function Modifier_le_joueur () {
+    if (Joueur1) {
+        Joueur1 = 0
+    } else {
+        Joueur1 = 1
+    }
+}
+ ```
+ 
