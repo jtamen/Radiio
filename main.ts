@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    led.unplot(0, 0)
+    led.unplot(X, Y)
     Modifier_le_joueur()
 })
 function Del_J1_ou_J2 () {
@@ -18,6 +18,8 @@ function Modifier_le_joueur () {
         Joueur1 = 1
     }
 }
+let Y = 0
+let X = 0
 let Joueur1 = 0
 basic.showLeds(`
     # # # # #
@@ -27,8 +29,8 @@ basic.showLeds(`
     . . . . .
     `)
 Joueur1 = 1
-let X = 0
-let Y = 0
+X = 0
+Y = 0
 basic.forever(function () {
     Del_J1_ou_J2()
 })

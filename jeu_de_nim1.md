@@ -85,7 +85,7 @@ function Modifier_le_joueur () {
  ```
 ## Etape 7
 Déposons le bloc ``||Input: lorsque le bouton A est pressé||`` dans l'espace de travail. 
-Glissons à l'intérieur le bloc "LED" ``||Led: allumer x 0 y 0||`` ainsi que le bloc "Fonction" ``||Functions : appel Modifier le joueur||``
+Glissons à l'intérieur le bloc "LED" ``||Led: éteindre x 0 y 0||`` ainsi que le bloc "Fonction" ``||Functions : appel Modifier le joueur||``
 ```blocks
 let Joueur1 = 0
 input.onButtonPressed(Button.A, function () {
@@ -176,22 +176,15 @@ basic.forever(function () {
 En cliquant à plusieurs reprises sur le bouton A de la simulation, on constate que
 l'on permute de la Del du bas à gauche à celle de droite.
 ![Afficher nim1](https://github.com/jtamen/tuto1/blob/master/Images/nim1.gif?raw=true)
- ## Etape 
-On crée 2 nouvelles variables :
-* ``||Variables: x||``, qui indiquera la position de la led sur la ligne
-(0 : position la plus à gauche de la matrice 5x4, 4: position la plus à droite de la matrice 5x4)
-* ``||Variables: y||``, qui indiquera la position de la led sur la colonne
-(0 : position la plus en haut de la matrice 5x4, 3: position la plus en bas de la matrice 5x4)
-On défini ces 2 variables à 0 que l'on glisse dans le bloc ``||Basic: au démarrage||``.
+
+## Etape 11
+Modifions à présent le bloc ``||Input: lorsque le bouton A est pressé||``. 
+Dans le bloc "LED" ``||Led: éteindre x 0 y 0||``, glissons la variable ``||Variables: X||`` à la place du 0 à côté de x
+et la variable ``||Variables: Y||`` à la place du 0 à côté de y
 ```blocks
- basic.showLeds(`
-    # # # # #
-    # # # # #
-    # # # # #
-    # # # # #
-    . . . . .
-    `)
-let Joueur1 = 1
-let Y = 0
-let x = 0
+input.onButtonPressed(Button.A, function () {
+    led.unplot(X, Y)
+    Modifier_le_joueur()
+})
  ```
+
