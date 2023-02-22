@@ -110,12 +110,6 @@ function Modifier_le_joueur () {
     }
 }
  ```
-## @showdialog
-A ce stade nous voulons savoir si chaque fois que l'on appuie sur le bouton A, la variable
-``||Variables: joueur1||`` change d'état.
-Pour cela nous allons utiliser le mode débogueur ![Afficher debogueur](https://github.com/jtamen/tuto1/blob/master/Images/Capture%20d%E2%80%99%C3%A9cran%20debogueur.jpg?raw=true)
-Ce mode permet permet de voir l'état des variables ainsi que l'avancée dans le programme.
-Nous pouvons même le ralentir en cliquant sur le mode "escargot" ![Afficher escargot](https://github.com/jtamen/tuto1/blob/master/Images/Capture%20d%E2%80%99%C3%A9cran%20ralentir.jpg?raw=true)
 
 ## @showdialog
 En cliquant à plusieurs reprises sur le bouton A de la simulation, on voit dans ce mode "débogueur"
@@ -210,7 +204,7 @@ input.onButtonPressed(Button.A, function () {
  ```
  
 ## @showdialog
-A ce stade, en mode débogueur nous constatons que chaque fois que nous cliquons sur A,
+A ce stade, nous constatons que chaque fois que nous cliquons sur A,
  la Del suivante s'éteint et c'est à l'autre joueur de jouer, mais lorsque la variable x
  atteint la valeur de 5, plus rien ne se passe. Ceci est normal car nous avons atteint la fin de la ligne.
  Dans la prochaine étape nous devrons faire varier Y.
@@ -355,6 +349,15 @@ Dans la boucle ``||basic: toujours||``, nous ajoutons deux conditions :
 ``||Basic: afficher texte "j2 GAGNE"||``.
 * Condition 2 :``||Logic: si X=0 et Y=4 et Joueur1=0 alors||``, et on y glisse 
 ``||Basic: afficher texte "j1 GAGNE"||``.
+```ghost
+input.onButtonPressed(Button.A, function () {
+    let Y = 0
+    let X = 0
+    if (X == 0 && Y == 0) {
+    	
+    }
+})
+```
 ```blocks
 basic.forever(function () {
     Del_J1_ou_J2()
