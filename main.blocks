@@ -1,7 +1,1 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="u@bSJ!/I,WPZW%dMk{GD">X</variable><variable id="i*Bj(3c)eT|7)6thPlPF">Y</variable><variable id=":1eJsxbQ@?l7T*C_b1lc">Joueur1</variable></variables><block type="pxt-on-start" id="R^/`cJrVR!91hJr|$boQ" x="0" y="0"><statement name="HANDLER"><block type="device_show_leds" id="4l{^2l3u2P.{/7Cd_(@F"><field name="LEDS">`
-        # # # # # 
-        # # # # # 
-        # # # # # 
-        # # # # # 
-        . . . . .
-        `</field></block></statement></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="device_button_event" id="JRk@#GZ!!DW|a3a4W(gZ" x="254" y="82"><field name="NAME">Button.A</field></block></xml>
