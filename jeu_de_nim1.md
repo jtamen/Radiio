@@ -26,7 +26,7 @@ basic.showLeds(`
     # # # # #
     . . . . .
     `)
-```
+    ```
 Dans le bloc ``||basic: Au démarrage||``, on allume 20 leds :
 ```blocks
  basic.showLeds(`
@@ -36,7 +36,7 @@ Dans le bloc ``||basic: Au démarrage||``, on allume 20 leds :
     # # # # #
     . . . . .
     `)
-```
+    ```
 ## Etape 2
 On crée 1 variable :
 * ``||Variables: Joueur1||``, qui suivant qu'elle sera à 1 ou à 0 indiquera si c'est au joueur 1 de jouer ou pas.
