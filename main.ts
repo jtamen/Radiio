@@ -29,6 +29,15 @@ function Modifier_le_joueur () {
         Joueur1 = 1
     }
 }
+input.onButtonPressed(Button.AB, function () {
+    Eteindre_del()
+    fin_de_ligne()
+    Eteindre_del()
+    fin_de_ligne()
+    Eteindre_del()
+    fin_de_ligne()
+    Modifier_le_joueur()
+})
 input.onButtonPressed(Button.B, function () {
     Eteindre_del()
     fin_de_ligne()
@@ -51,4 +60,10 @@ X = 0
 Y = 0
 basic.forever(function () {
     Del_J1_ou_J2()
+    if (X == 0 && Y == 4 && Joueur1 == 1) {
+        basic.showString("J2 GAGNE")
+    }
+    if (X == 0 && Y == 4 && Joueur1 == 0) {
+        basic.showString("J1 GAGNE")
+    }
 })

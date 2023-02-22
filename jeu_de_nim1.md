@@ -240,7 +240,7 @@ function eteindre_del () {
 }
  ```
 
- ## Etape 16
+## Etape 16
 Il faut ensuite faire appel à cette fonction ``||Functions: appel eteindre del||`` 
 dans ``||Input: lorsque le bouton A est pressé||``
 ```blocks
@@ -258,7 +258,7 @@ input.onButtonPressed(Button.A, function () {
 })
  ```
 
- ## Etape 17
+## Etape 17
 De la même manière nous devons créer une ``||Functions: Fonction||`` "fin de ligne", y 
 glisser le bloc ``||Logic: si X >= 5 alors||``, et déposer à la place 
 dans ``||Input: lorsque le bouton A est pressé||`` cette nouvelle fonction.
@@ -275,7 +275,7 @@ input.onButtonPressed(Button.A, function () {
     Modifier_le_joueur()
 })
  ```
- ## Etape 18
+## Etape 18
 Nous allons créer le bloc ``||Input: lorsque le bouton B est pressé||`` et y glisser 
 deux fois à la suite les fonctions ``||Functions: appel eteindre del||`` + ``||Functions: appel fin de ligne||``.
 Ainsi, lorsqu'un joueur appuiera sur le bouton B, deux Dels s'éteindrons au lieu d'une.
@@ -303,6 +303,57 @@ input.onButtonPressed(Button.B, function () {
     Eteindre_del()
     fin_de_ligne()
     Modifier_le_joueur()
+})
+ ```
+## Etape 19
+Répétons cette même opération avec un bloc ``||Input: lorsque le bouton A+B est pressé||``.
+Cette fois nous y glissons trois fois à la suite les fonctions ``||Functions: appel eteindre del||`` + ``||Functions: appel fin de ligne||``.
+Ainsi, lorsqu'un joueur appuiera sur les boutons A et B en même temps, trois Dels s'éteindrons.
+```blocks
+function fin_de_ligne () {
+    if (X >= 5) {
+        X = 0
+        Y += 1
+    }
+}
+function Eteindre_del () {
+    led.unplot(X, Y)
+    X += 1
+}
+function Modifier_le_joueur () {
+    if (Joueur1) {
+        Joueur1 = 0
+    } else {
+        Joueur1 = 1
+    }
+}
+input.onButtonPressed(Button.AB, function () {
+    Eteindre_del()
+    fin_de_ligne()
+    Eteindre_del()
+    fin_de_ligne()
+    Eteindre_del()
+    fin_de_ligne()
+    Modifier_le_joueur()
+})
+ ```
+## Etape 20
+Il reste une dernière étape qui consistera à désigner le gagnant. Pour rappel le gagnant
+est celui qui prend la dernière alumette (éteint la dernière Del).
+Dans la boucle ``||basic: toujours||``, nous ajoutons deux conditions :
+* Condition 1 :``||Logic: si X=0 et Y=4 et Joueur1=1 alors||``, et on y glisse 
+``||Basic: afficher texte "j2 GAGNE"||``.
+* Condition 2 :``||Logic: si X=0 et Y=4 et Joueur1=0 alors||``, et on y glisse 
+``||Basic: afficher texte "j1 GAGNE"||``.
+```blocks
+basic.forever(function () {
+    Del_J1_ou_J2()
+    if (X == 0 && Y == 4 && Joueur1 == 1) {
+        basic.showString("J2 GAGNE")
+    }
+    if (X == 0 && Y == 4 && Joueur1 == 0) {
+        basic.showString("J1 GAGNE")
+    }
 })
  ```
  
