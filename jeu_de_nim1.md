@@ -228,4 +228,13 @@ function Modifier_le_joueur () {
     }
 }
  ```
+ ## Etape 14
+Nous arrivons à une étape cruciale pour simplifier le programme. Comme chaque joueur va devoir
+à tour de rôle choisir d'éteindre une Del (cette partie vient d'être faite), deux ou trois Dels,
+nous constatons que ces tâches vont être répétitives, nous allons donc en faire des sous-programmes ``||Functions: Fonctions||``.
+Créons la fonction "eteindre del". 
+```blocks
+function eteindre_del () {
+}
+ ```
  

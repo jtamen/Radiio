@@ -1,3 +1,6 @@
+function eteindre_del () {
+	
+}
 input.onButtonPressed(Button.A, function () {
     led.unplot(X, Y)
     X += 1
