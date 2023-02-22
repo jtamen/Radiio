@@ -11,7 +11,8 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "jeu_de_nim1.md"
+        "jeu_de_nim1.md",
+        "communication_radio.md"
     ],
     "testFiles": [
         "test.ts"
