@@ -26,7 +26,7 @@ basic.showLeds(`
     # # # # #
     . . . . .
     `)
-    ```
+```
 Dans le bloc ``||basic: Au démarrage||``, on allume 20 leds :
 ```blocks
  basic.showLeds(`
