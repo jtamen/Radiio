@@ -175,7 +175,7 @@ basic.forever(function () {
 ## @showdialog
 En cliquant à plusieurs reprises sur le bouton A de la simulation, on constate que
 l'on permute de la Del du bas à gauche à celle de droite.
-![Afficher debogueur](https://github.com/jtamen/tuto1/blob/master/Images/debogueur.gif?raw=true)
+![Afficher nim1](https://github.com/jtamen/tuto1/blob/master/Images/nim1.gif?raw=true)
  ## Etape 
 On crée 2 nouvelles variables :
 * ``||Variables: x||``, qui indiquera la position de la led sur la ligne
