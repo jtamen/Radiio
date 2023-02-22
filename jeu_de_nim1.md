@@ -220,15 +220,8 @@ input.onButtonPressed(Button.A, function () {
     }
     Modifier_le_joueur()
 })
-function Modifier_le_joueur () {
-    if (Joueur1) {
-        Joueur1 = 0
-    } else {
-        Joueur1 = 1
-    }
-}
  ```
- ## Etape 14
+## Etape 14
 Nous arrivons à une étape cruciale pour simplifier le programme. Comme chaque joueur va devoir
 à tour de rôle choisir d'éteindre une Del (cette partie vient d'être faite), deux ou trois Dels,
 nous constatons que ces tâches vont être répétitives, nous allons donc en faire des sous-programmes ``||Functions: Fonctions||``.
@@ -236,5 +229,80 @@ Créons la fonction "eteindre del".
 ```blocks
 function eteindre_del () {
 }
+ ```
+## Etape 15
+Récupérons les blocs ``||Led: éteindre x X y Y||`` et ``||Variables: modifier X de 1||``
+du bloc ``||Input: lorsque le bouton A est pressé||`` pour les glisser dans cette nouvelle fonction.
+```blocks
+function eteindre_del () {
+    led.unplot(X, Y)
+    X += 1
+}
+ ```
+
+ ## Etape 16
+Il faut ensuite faire appel à cette fonction ``||Functions: appel eteindre del||`` 
+dans ``||Input: lorsque le bouton A est pressé||``
+```blocks
+function eteindre_del () {
+    led.unplot(X, Y)
+    X += 1
+}
+input.onButtonPressed(Button.A, function () {
+    eteindre_del()
+    if (X >= 5) {
+        X = 0
+        Y += 1
+    }
+    Modifier_le_joueur()
+})
+ ```
+
+ ## Etape 17
+De la même manière nous devons créer une ``||Functions: Fonction||`` "fin de ligne", y 
+glisser le bloc ``||Logic: si X >= 5 alors||``, et déposer à la place 
+dans ``||Input: lorsque le bouton A est pressé||`` cette nouvelle fonction.
+```blocks
+function fin_de_ligne () {
+    if (X >= 5) {
+        X = 0
+        Y += 1
+    }
+}
+input.onButtonPressed(Button.A, function () {
+    Eteindre_del()
+    fin_de_ligne()
+    Modifier_le_joueur()
+})
+ ```
+ ## Etape 18
+Nous allons créer le bloc ``||Input: lorsque le bouton B est pressé||`` et y glisser 
+deux fois à la suite les fonctions ``||Functions: appel eteindre del||`` + ``||Functions: appel fin de ligne||``.
+Ainsi, lorsqu'un joueur appuiera sur le bouton B, deux Dels s'éteindrons au lieu d'une.
+```blocks
+function fin_de_ligne () {
+    if (X >= 5) {
+        X = 0
+        Y += 1
+    }
+}
+function Eteindre_del () {
+    led.unplot(X, Y)
+    X += 1
+}
+function Modifier_le_joueur () {
+    if (Joueur1) {
+        Joueur1 = 0
+    } else {
+        Joueur1 = 1
+    }
+}
+input.onButtonPressed(Button.B, function () {
+    Eteindre_del()
+    fin_de_ligne()
+    Eteindre_del()
+    fin_de_ligne()
+    Modifier_le_joueur()
+})
  ```
  

@@ -1,13 +1,16 @@
-function eteindre_del () {
-	
-}
-input.onButtonPressed(Button.A, function () {
-    led.unplot(X, Y)
-    X += 1
+function fin_de_ligne () {
     if (X >= 5) {
         X = 0
         Y += 1
     }
+}
+function Eteindre_del () {
+    led.unplot(X, Y)
+    X += 1
+}
+input.onButtonPressed(Button.A, function () {
+    Eteindre_del()
+    fin_de_ligne()
     Modifier_le_joueur()
 })
 function Del_J1_ou_J2 () {
@@ -26,6 +29,13 @@ function Modifier_le_joueur () {
         Joueur1 = 1
     }
 }
+input.onButtonPressed(Button.B, function () {
+    Eteindre_del()
+    fin_de_ligne()
+    Eteindre_del()
+    fin_de_ligne()
+    Modifier_le_joueur()
+})
 let Y = 0
 let X = 0
 let Joueur1 = 0
