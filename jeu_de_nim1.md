@@ -26,7 +26,7 @@ basic.showLeds(`
     # # # # #
     . . . . .
     `)
-    ```
+ ```
 Dans le bloc ``||basic: Au démarrage||``, on allume 20 leds :
 ```blocks
  basic.showLeds(`
@@ -36,7 +36,7 @@ Dans le bloc ``||basic: Au démarrage||``, on allume 20 leds :
     # # # # #
     . . . . .
     `)
-    ```
+ ```
 ## Etape 2
 On crée 1 variable :
 * ``||Variables: Joueur1||``, qui suivant qu'elle sera à 1 ou à 0 indiquera si c'est au joueur 1 de jouer ou pas.
@@ -110,13 +110,8 @@ function Modifier_le_joueur () {
     }
 }
  ```
-
 ## @showdialog
-En cliquant à plusieurs reprises sur le bouton A de la simulation, on voit dans ce mode "débogueur"
-le changement d'état de la variable ``||Variables: joueur1||``.
 ![Afficher debogueur](https://github.com/jtamen/tuto1/blob/master/Images/debogueur.gif?raw=true)
-Il est vivement recommandé d'utiliser ce mode de débogage, lorsqu'une nouvelle étape importante
-du programme est créée. Cela permet de comparer le résultat par rapport à nos attentes.
 
  ## Etape 8
 On crée 2 nouvelles variables :
@@ -357,7 +352,7 @@ input.onButtonPressed(Button.A, function () {
     	
     }
 })
-```
+ ```
 ```blocks
 basic.forever(function () {
     Del_J1_ou_J2()
